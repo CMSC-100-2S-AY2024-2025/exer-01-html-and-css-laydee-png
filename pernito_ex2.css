@@ -1,44 +1,271 @@
-body {
-    font-family: Arial, sans-serif;
+/*OVERALL STYLE*/
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Container */
-.container {
+body {
+    background-color: #26415E;
+    color: #333;
+    text-align: center;
+}
+
+/*Header*/
+header {
+    background: none;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: beige;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*About*/
+#about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 80%;
     margin: auto;
-    overflow: hidden;
-}
-/* Header */
-header {
-    background: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+    padding: 50px 0;
+    position: relative;
 }
 
-header nav ul {
+.about-text {
+    width: 30%;
+    text-align: left;
+    font-size: 18px;
+    color: beige;
+}
+
+.profile {
+    position: center;
+}
+
+.profile img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile img:hover {
+    transform: scale(1.05);
+}
+
+.name {
+    text-align: right;
+    width: 30%;
+}
+
+.name h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: beige;
+}
+
+.name p {
+    font-size: 20px;
+    color: #0B1B32;
+}
+
+/*Animation*/
+#featured .container img {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/*Skills*/
+#skills {
+    background-color: #1E3040;
+    padding: 60px 0;
+}
+
+.skills-container {
+    width: 80%;
+    margin: auto;
+}
+
+.skills-container h2 {
+    font-size: 75px;
+    color: beige;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-box {
+    background: beige;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+}
+
+.skill-box h3 {
+    font-size: 22px;
+    color: #26415E;
+    margin-bottom: 10px;
+}
+
+.skill-box ul {
     list-style: none;
     padding: 0;
-} 
-
-header nav ul li {
-    display: inline;
-    margin: 0 20px;
 }
 
-header nav ul li a {
-    color: white;
-    text-decoration:
-    none;
+.skill-box ul li {
+    font-size: 16px;
+    color: #333;
+    padding: 5px 0;
 }
 
-/* Hero Section */
 
-#hero {
+/*Projects*/
+#projects {
+    margin-top: 50px;
     text-align: center;
-    padding: 50px 0;
 }
+
+#project-title {
+    color: beige;
+    font-size: 75px;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 60%;
+    margin: auto;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-align: left;
+    animation: fadeIn 1.5s ease-in-out;
+    background-color: beige;
+}
+
+.project img {
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 20px;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #26415E;
+    margin-bottom: 5px;
+}
+
+.project p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+/*Footer*/
+footer {
+    background: #0B1B32;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.back-to-top {
+    color: #83A6CE;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-to-top:hover {
+    text-decoration: underline;
+}
+
+/*More Animations*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*
+REFERENCES
+- Animations
+    https://www.w3schools.com/css/css3_animations.asp
+- Automatic Sizing for Grids
+    https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/
+*/
