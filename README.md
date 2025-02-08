@@ -2,7 +2,7 @@
 
 Laydee Graceth R. Pernito
 BS Computer Science
-https://github.com/CMSC-100-2S-AY2024-2025/exer-01-html-and-css-laydee-png
+https://cmsc-100-2s-ay2024-2025.github.io/exer-01-html-and-css-laydee-png/
 
 Steps on how to create GitHub page:
     1. Clone the remote repository in the local machine and configure Git in the local repo by setting the personal email and username.
